@@ -22,7 +22,7 @@ pod "CustomCollectionViews"
 
 ## Author
 
-vikas goyal, vikas.goyal@webvirtue.com
+vikas goyal
 
 ## License
 
