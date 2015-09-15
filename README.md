@@ -17,7 +17,9 @@ CustomCollectionViews is available through [CocoaPods](http://cocoapods.org). To
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "CustomCollectionViews"
+pod 'CustomCollectionViews', :git => 'https://github.com/vikas4goyal/CustomCollectionViews.git', :branch => ‘master’
+
+//pod "CustomCollectionViews"
 ```
 
 ## Author
