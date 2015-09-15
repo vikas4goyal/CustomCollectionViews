@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class ExpandableCollectionView: MutiSectionCollectionView {
+public class ExpandableCollectionView: MutiSectionCollectionView {
     var allowsMultipleExpandedSections:Bool = true;
    
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
         setup();
     }

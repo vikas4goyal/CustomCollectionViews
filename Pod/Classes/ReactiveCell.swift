@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ReactiveCell{
+public protocol ReactiveCell{
     func bindViewToModel(model:AnyObject);
 }

@@ -9,11 +9,11 @@
 import Foundation
 import UIKit
 
-class MutiSectionCollectionView: UICollectionView {
+public class MutiSectionCollectionView: UICollectionView {
     private var collectionData:Dictionary<Int,Array<AnyObject>>?;
     private var collectionSections:Array<AnyObject>?
     
-    required init(coder aDecoder: NSCoder) {
+    required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
         setup();
     }
@@ -29,26 +29,26 @@ class MutiSectionCollectionView: UICollectionView {
 //MARK: data source
 extension MutiSectionCollectionView:UICollectionViewDataSource
 {
-    override func numberOfSections() -> Int {
+     public override func numberOfSections() -> Int {
         if let collectionData = collectionData{
             return collectionData.count;
         }
         return 0;
     }
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     public func  collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let collectionData = collectionData{
             let items = collectionData[section];
             return items!.count;
         }
         return 0;
     }
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+     public func  collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         if(kind == UICollectionElementKindSectionHeader){
             
         }
         return UICollectionReusableView();
     }
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+     public func  collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let dataArray = self.collectionData![indexPath.section]!;
         let data = dataArray[indexPath.item] as! BaseCellModel;
         let cell: AnyObject = collectionView.dequeueReusableCellWithReuseIdentifier(data.identifier(), forIndexPath: indexPath);

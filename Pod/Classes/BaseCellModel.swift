@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol BaseCellModel {
+public protocol BaseCellModel {
     func identifier()->String;
 }
